@@ -25,6 +25,7 @@ module Api
       end
 
       sign_in(:user, user)
+
       render json: {
         user: {
           id: user.id,
