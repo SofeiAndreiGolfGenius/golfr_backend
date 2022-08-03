@@ -1,6 +1,0 @@
-<% 30.times do |n| %>
-score_<%= n %>:
-  user: george
-  total_score: <%= Random.new.rand(66..99) %>
-  played_at: <%= Time.zone.today - 20.days + n.days %>
-<% end %>
