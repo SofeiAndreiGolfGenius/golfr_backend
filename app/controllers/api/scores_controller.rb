@@ -15,15 +15,6 @@ module Api
       render json: response.to_json
     end
 
-    def user_scores
-      user = User.find(params[:id])
-      scores = user.scores.order(played_at: :desc, id: :desc)
-      response = {
-        scores: scores
-      }
-      render json: response.to_json
-    end
-
     def create
       score = current_user.scores.build(score_params)
 
